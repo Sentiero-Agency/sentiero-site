@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentiero | Google Ads for HVAC and Plumbing Shops</title>
+<meta name="description" content="Google Search and Local Services Ads management for HVAC, plumbing and home service businesses. Flat fee, you own the account. Book a free 30-minute ad audit.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Sentiero | Google Ads for home service businesses">
+<meta property="og:description" content="Google Ads for HVAC and plumbing shops that want booked jobs, not clicks. Book a free 30-minute ad audit.">
+<meta property="og:image" content="https://sentieroagency.com/og.png">
+<meta property="og:url" content="https://sentieroagency.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one long page on cream; masthead, split hero with an audit checklist card, alternating plain and tinted bands, terracotta booking band at the foot */
+:root{
+  --cream:#F7F3ED; --paper:#FFFDF9; --tint:#EFE8DD; --ink:#2B2B28; --muted:#5E5B54;
+  --terracotta:#C1502E; --terracotta-dark:#A3411F; --sage:#7A8B6F; --stone:#A69B85; --rule:#E2D9CB;
+  --display:"Lora",Georgia,"Times New Roman",serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1080px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--terracotta)}
+a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.18;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5.4vw,56px);letter-spacing:-.015em}
+h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.01em}
+h3{font-size:20px}
+p{margin:0}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--terracotta);color:#FFFDF9;text-decoration:none;font-weight:600;font-size:16px;padding:15px 24px;border-radius:3px;transition:background .15s}
+.btn:hover{background:var(--terracotta-dark)}
+.btn.small{padding:10px 16px;font-size:14.5px}
+.btn.light{background:var(--paper);color:var(--terracotta)}
+.btn.light:hover{background:var(--cream)}
+
+/* masthead */
+.mast{padding-block:18px;border-bottom:1px solid var(--rule)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mast img{width:132px}
+.mast nav{display:flex;align-items:center;gap:26px}
+.mast nav a.link{color:var(--ink);text-decoration:none;font-size:15px}
+.mast nav a.link:hover{color:var(--terracotta)}
+
+/* hero */
+.hero{padding-block:72px 84px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
+.hero .wrap>*{min-width:0}
+.hero .sub{font-size:19px;color:var(--muted);margin-top:22px;max-width:52ch}
+.hero .cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.hero .note{font-size:14.5px;color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:26px 26px 22px;box-shadow:0 18px 40px -28px rgba(43,43,40,.35)}
+.card .eyebrow{color:var(--muted)}
+.card h3{margin-top:6px;margin-bottom:16px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--rule);font-size:15px}
+.checks li::before{content:"";width:12px;height:12px;margin-top:6px;border:1.5px solid var(--sage);border-radius:2px}
+.checks span{color:var(--muted);font-size:13.5px;display:block}
+.card .foot{margin-top:14px;font-size:13.5px;color:var(--muted);font-family:var(--display);font-style:italic}
+
+/* bands */
+section.band{padding-block:84px}
+section.tint{background:var(--tint)}
+.head{max-width:680px;display:grid;gap:12px;margin-bottom:40px}
+.head p{color:var(--muted);font-size:18px}
+
+/* problem */
+.leaks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.leak{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:22px 24px}
+.leak h3{font-size:19px;margin-bottom:6px}
+.leak p{color:var(--muted);font-size:15.5px}
+.leak q{quotes:"\201C" "\201D";font-style:italic}
+.callout{margin-top:32px;font-family:var(--display);font-size:21px;max-width:44ch;padding-left:20px;border-left:3px solid var(--terracotta)}
+
+/* get */
+.get{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.get div{padding:20px 0;border-top:1px solid var(--rule)}
+.get h3{font-size:19px;margin-bottom:4px}
+.get p{color:var(--muted);font-size:15.5px}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.timeline li{position:relative;padding-top:68px}
+.timeline li::before{content:"";position:absolute;top:21px;left:44px;right:-28px;height:2px;background:var(--terracotta)}
+.timeline li:last-child::before{right:0;background:repeating-linear-gradient(90deg,var(--terracotta) 0 8px,transparent 8px 14px);-webkit-mask-image:linear-gradient(90deg,#000 40%,transparent);mask-image:linear-gradient(90deg,#000 40%,transparent)}
+.timeline .dot{position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;border:2px solid var(--terracotta);background:var(--paper);color:var(--terracotta);font-family:var(--display);font-size:20px;line-height:40px;text-align:center;box-sizing:border-box}
+.timeline li:first-child .dot{background:var(--terracotta);color:var(--paper)}
+.timeline .when{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--terracotta-dark);background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.timeline h3{font-size:19px;margin-bottom:6px}
+.timeline p{color:var(--muted);font-size:15px;margin:0}
+@media (max-width:760px){
+  .timeline{grid-template-columns:1fr;gap:0}
+  .timeline li{padding:0 0 32px 64px}
+  .timeline li::before{top:44px;bottom:0;left:21px;right:auto;width:2px;height:auto}
+  .timeline li:last-child{padding-bottom:0}
+  .timeline li:last-child::before{bottom:auto;height:36px;background:repeating-linear-gradient(180deg,var(--terracotta) 0 6px,transparent 6px 11px);-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent);mask-image:linear-gradient(180deg,#000 30%,transparent)}
+  .timeline .when{margin-top:9px}
+}
+
+/* pricing */
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.pricing>*{min-width:0}
+.terms{list-style:none;margin:0;padding:0}
+.terms li{padding:16px 0;border-top:1px solid var(--rule);display:grid;gap:2px}
+.terms li:last-child{border-bottom:1px solid var(--rule)}
+.terms b{font-weight:600}
+.terms span{color:var(--muted);font-size:15.5px}
+.pricing .aside{font-family:var(--display);font-size:20px;line-height:1.5}
+.pricing .aside p+p{margin-top:16px}
+.pricing .aside .btn{margin-top:26px;font-family:var(--body)}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.about>*{min-width:0}
+.about .body{display:grid;gap:16px;font-size:17.5px;max-width:62ch}
+.about .honest{font-family:var(--display);font-size:19px;border-left:3px solid var(--stone);padding-left:18px}
+.facts{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px;font-size:15px;color:var(--muted)}
+.facts li{display:flex;gap:10px}
+.facts li::before{content:"";flex:none;width:7px;height:7px;margin-top:9px;background:var(--sage);transform:rotate(45deg)}
+
+/* faq */
+.faq{max-width:780px}
+details{border-top:1px solid var(--rule)}
+details:last-of-type{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-family:var(--display);font-size:20px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:16px;font-family:var(--body);font-size:24px;color:var(--terracotta);font-weight:400}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 0 22px;color:var(--muted);max-width:64ch}
+
+/* booking band */
+.book{background:var(--terracotta);color:#FFFDF9;padding-block:72px}
+.book .wrap{display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
+.book h2{color:#FFFDF9}
+.book p{margin-top:12px;max-width:52ch;opacity:.95}
+.book .eyebrow{color:#FFFDF9;opacity:.85}
+
+footer{padding-block:40px;font-size:14.5px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+footer img{width:110px}
+footer .contact{display:flex;flex-wrap:wrap;gap:8px 24px}
+footer a{color:var(--ink);text-decoration:none}
+footer a:hover{color:var(--terracotta)}
+
+@media (max-width:900px){
+  .hero .wrap,.pricing,.about{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding-inline:18px}
+  .mast nav a.link{display:none}
+  .mast img{width:112px}
+  .hero{padding-block:44px 56px}
+  section.band{padding-block:60px}
+  .leaks,.get{grid-template-columns:1fr}
+  .book{padding-block:56px}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <a href="#top" aria-label="Sentiero home"><img src="logo.png" alt="Sentiero" width="490" height="310"></a>
+    <nav aria-label="Main">
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#pricing">Pricing</a>
+      <a class="link" href="#about">About</a>
+      <a class="btn small" href="https://bookings.cloud.microsoft/book/Sentiero1@sentieroagency.com/" target="_blank" rel="noopener">Book a free audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Google Ads for home service businesses</p>
+        <h1 style="margin-top:14px">Google Ads for HVAC and plumbing shops that want booked jobs, not clicks.</h1>
+        <p class="sub">I run Google Search and Local Services Ads for any home service business, with a focus on HVAC and plumbing. Based in Kansas City, working with shops across the US. You own the account, you pay Google directly, and you see exactly where every dollar goes.</p>
+        <div class="cta">
+          <a class="btn" href="https://bookings.cloud.microsoft/book/Sentiero1@sentieroagency.com/" target="_blank" rel="noopener">Get a free 30-minute ad audit</a>
+          <span class="note">No contract to see the audit. You keep the findings either way.</span>
+        </div>
+      </div>
+      <aside class="card" aria-label="What the free audit checks">
+        <p class="eyebrow">Free 30-minute audit</p>
+        <h3>What I check on your account</h3>
+        <ul class="checks">
+          <li><div>Local Services Ads<span>Do you show in the Google Guaranteed box for your top service?</span></div></li>
+          <li><div>Search terms<span>How much spend goes to searches that never become jobs</span></div></li>
+          <li><div>Conversion tracking<span>Whether calls and forms are counted, so cost per lead is known</span></div></li>
+          <li><div>Landing page<span>Click-to-call on mobile, load speed, match to the ad</span></div></li>
+          <li><div>Reviews and map pack<span>Where you stand against the top 3 competitors</span></div></li>
+        </ul>
+        <p class="foot">You leave with three fixes.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="band tint" aria-labelledby="problem-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">The problem</p>
+        <h2 id="problem-h">Most home service ad accounts leak money in the same places.</h2>
+      </div>
+      <div class="leaks">
+        <div class="leak"><h3>Searches that never turn into jobs</h3><p>Ads showing for <q>HVAC jobs</q>, <q>how to fix a furnace</q>, or the wrong city.</p></div>
+        <div class="leak"><h3>No call tracking</h3><p>Nobody knows what a lead actually costs, so nobody knows what to cut.</p></div>
+        <div class="leak"><h3>One generic ad for every service</h3><p>Sending people to a homepage instead of a page built to make them call.</p></div>
+        <div class="leak"><h3>Ads running at 2 a.m.</h3><p>Paying for clicks when nobody is there to answer the phone.</p></div>
+      </div>
+      <p class="callout">If you're spending on Google and can't say what a booked job costs you, that's the first thing to fix.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="get-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What you get</p>
+        <h2 id="get-h">One specialist on your account, not a junior at a big agency.</h2>
+      </div>
+      <div class="get">
+        <div><h3>Google Search ads</h3><p>Built around your services and service area, with negative keywords that cut wasted spend.</p></div>
+        <div><h3>Local Services Ads</h3><p>Setup and management, including rating every lead so Google credits invalid ones and learns which calls are real jobs.</p></div>
+        <div><h3>Call and form tracking</h3><p>So you know your cost per lead and, with your input, your cost per booked job.</p></div>
+        <div><h3>A one-page monthly report</h3><p>In plain English: what you spent, how many leads it produced, what each cost, and what I changed.</p></div>
+        <div><h3>A direct line to me</h3><p>Email replies within one business day and a monthly 30-minute review call.</p></div>
+        <div><h3>Weekly account work</h3><p>Search terms, bids, budget and ad schedule checked every week.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-h">From a 30-minute call to ads running in your own account.</h2>
+      </div>
+      <ol class="timeline">
+        <li><span class="dot" aria-hidden="true">1</span><span class="when">30-minute call</span><h3>Free audit</h3><p>I look at how you show up on Google today and give you three fixes, whether or not you hire me.</p></li>
+        <li><span class="dot" aria-hidden="true">2</span><span class="when">One page</span><h3>Proposal</h3><p>If it makes sense, you get a plain proposal with the fee, the plan for the first 90 days, and the ad budget I recommend.</p></li>
+        <li><span class="dot" aria-hidden="true">3</span><span class="when">First 2 weeks</span><h3>Setup</h3><p>Tracking, campaigns and Local Services Ads go live in your own account.</p></li>
+        <li><span class="dot" aria-hidden="true">4</span><span class="when">Ongoing</span><h3>Tune and report</h3><p>I check search terms and bids every week and send your report every month.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="pricing" aria-labelledby="pricing-h">
+    <div class="wrap pricing">
+      <div>
+        <div class="head" style="margin-bottom:24px">
+          <p class="eyebrow">How pricing works</p>
+          <h2 id="pricing-h">A flat fee. No percentage of your ad spend.</h2>
+        </div>
+        <ul class="terms">
+          <li><b>One flat management fee, billed every 4 weeks</b><span>It's set in your proposal based on your budget, not a cut of every dollar you spend.</span></li>
+          <li><b>You pay Google directly</b><span>For your ads, from your own account.</span></li>
+          <li><b>90-day first term</b><span>Then rolling 4-week periods with 30 days' notice to cancel.</span></li>
+          <li><b>Recommended ad budget</b><span>$1,500 a month or more, set by you.</span></li>
+        </ul>
+      </div>
+      <div class="aside">
+        <p>You'll get exact pricing in a one-page proposal after your free audit.</p>
+        <p style="color:var(--muted);font-size:17px;font-family:var(--body)">No surprises: the proposal shows the fee, what's included, and the budget I'd recommend for your market before you agree to anything.</p>
+        <a class="btn" href="https://bookings.cloud.microsoft/book/Sentiero1@sentieroagency.com/" target="_blank" rel="noopener">Book the free audit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="about" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div class="head" style="margin-bottom:0">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h">Who you'd be working with</h2>
+      </div>
+      <div class="body">
+        <p>I'm Owen Wolstenholm, based in Overland Park. I spent nearly three years in B2B sales at Sandhills Global and about 14 months as an account manager at TEKsystems, working with owners who want straight answers and measurable results. I'm Google Ads Search certified, and I started Sentiero to do one thing well: paid search for home service businesses.</p>
+        <p class="honest">Sentiero is new, so I don't have past client results to show you yet. That's why the audit is free: it's the easiest way to judge whether I know what I'm talking about.</p>
+        <ul class="facts">
+          <li>Google Ads Search certified</li>
+          <li>Based in Kansas City, working with shops anywhere in the US</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Questions</p><h2 id="faq-h">Straight answers</h2></div>
+      <div class="faq">
+        <details><summary>Do I own my ad account?</summary><p>Yes. It's in your name, on your card. If we stop working together, everything stays with you.</p></details>
+        <details><summary>Do you guarantee leads?</summary><p>No. Anyone who guarantees a number of leads before seeing your market is guessing. What I commit to is weekly work on your account and a clear monthly report on what it produced.</p></details>
+        <details><summary>Do you only work with HVAC and plumbing?</summary><p>No. HVAC and plumbing are my focus, but I work with any home service business: electricians, roofers, garage door companies, pest control, landscapers and more.</p></details>
+        <details><summary>Why only home services?</summary><p>Because the searches, seasons and lead types are the same problems over and over, and knowing them well is faster and cheaper for you.</p></details>
+        <details><summary>What areas do you cover?</summary><p>Anywhere in the US. I'm based in Kansas City and can meet in person there; everywhere else we work by phone and video.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-h">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2 id="book-h" style="margin-top:10px">See where your ad money is going.</h2>
+        <p>A free 30-minute review of how your business shows up on Google, with three fixes you can act on whether or not you hire me.</p>
+      </div>
+      <a class="btn light" href="https://bookings.cloud.microsoft/book/Sentiero1@sentieroagency.com/" target="_blank" rel="noopener">Book a free 30-minute audit</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.png" alt="Sentiero" width="490" height="310">
+    <div class="contact">
+      <a href="mailto:owen@sentieroagency.com">owen@sentieroagency.com</a>
+      <a href="tel:+19133332917">(913) 333-2917</a>
+      <span>Overland Park, Kansas</span>
+    </div>
+    <span>&copy; 2026 Sentiero Agency LLC</span>
+  </div>
+</footer>
+
+</body>
+</html>
